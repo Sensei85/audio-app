@@ -6,7 +6,15 @@
   "scripts": {
     "serve": "http-server -p 2018 build -c-1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sensei85/audio-app.git"
+  },
   "keywords": [],
-  "author": "Kent Wisdom",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sensei85/audio-app/issues"
+  },
+  "homepage": "https://github.com/Sensei85/audio-app#readme"
 }
