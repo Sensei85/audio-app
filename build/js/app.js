@@ -2,7 +2,7 @@
 function myfunction(){
   //loading neews feed home page on body loading
   //console.log('this is the home news feed page');
-  $('#myapp').load('feed.html');
+  $('#myapp').load('/build/feed.html');
 }
 
 //registering and installing our service worker
@@ -20,26 +20,26 @@ if ('serviceWorker' in navigator) {
 
 //js mvc architecture -- load other html pages on function call in main app via jquery load xml
 function loadfeed(){
-  $('#myapp').load('feed.html');
+  $('#myapp').load('/build/feed.html');
   $('#page-title').text('Home');
 }
 
 function searchpage(){
-  $('#myapp').load('search.html');
+  $('#myapp').load('/build/search.html');
   $('#page-title').text('Search');
 }
 
 function notify(){
-  $('#myapp').load('notifications.html');
+  $('#myapp').load('/build/notifications.html');
   $('#page-title').text('Nofitications');
 }
 
 function profile(){
-  $('#myapp').load('profile.html');
+  $('#myapp').load('/build/profile.html');
   $('#page-title').text('Profile');
 }
 
 function settings(){
-  $('#myapp').load('settings.html');
+  $('#myapp').load('/build/settings.html');
   $('#page-title').text('Settings');
 }
