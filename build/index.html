@@ -47,14 +47,16 @@
             </div>
           </div>
         </nav>
-        <!-- Icon Nav -->
-        <ul class="uk-child-width-expand uk-card uk-card-default uk-card-body" uk-tab style="padding-top: 10px; margin-top: -5px">
-          <li onclick="loadfeed()"><a style="padding-bottom: 16px"><span uk-icon="icon: home; ratio: 1.5"></span></a></li>
-          <li onclick="searchpage()"><a style="padding-bottom: 16px"><span uk-icon="icon: search; ratio: 1.5"></span></a></li>
-          <li onclick="notify()"><a style="padding-bottom: 16px"><span uk-icon="icon: bell; ratio: 1.5"></span><span class="uk-badge-notification">50</span></a></li>
-          <li onclick="profile()"><a style="padding-bottom: 16px"><span uk-icon="icon: user; ratio: 1.5"></span></a></li>
-          <li onclick="settings()"><a style="padding-bottom: 16px"><span uk-icon="icon: settings; ratio: 1.5"></span></a></li>
-        </ul>
+        <div>
+          <!-- Icon Nav -->
+          <ul class="uk-child-width-expand uk-card uk-card-default-custom uk-card-body" uk-tab style="padding-top: 15px; margin-top: -5px; margin-bottom: -2px">
+            <li onclick="loadfeed()"><a style="padding-bottom: 16px"><span uk-icon="icon: home; ratio: 1.5"></span></a></li>
+            <li onclick="searchpage()"><a style="padding-bottom: 16px"><span uk-icon="icon: search; ratio: 1.5"></span></a></li>
+            <li onclick="notify()"><a style="padding-bottom: 16px"><span uk-icon="icon: bell; ratio: 1.5"></span><span class="uk-badge-notification">50</span></a></li>
+            <li onclick="profile()"><a style="padding-bottom: 16px"><span uk-icon="icon: user; ratio: 1.5"></span></a></li>
+            <li onclick="settings()"><a style="padding-bottom: 16px"><span uk-icon="icon: settings; ratio: 1.5"></span></a></li>
+          </ul>
+        </div>
       </div>
 
       <div id="tm-mobile" uk-offcanvas="flip: true" uk-offcanvas mode="push">

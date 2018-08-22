@@ -6,7 +6,7 @@ console.log('our custom adjustments');
 workbox.precaching.precacheAndRoute([
   {
     "url": "css/main.css",
-    "revision": "c94a69c575ac5fa56ff75b80a7e31635"
+    "revision": "a364844953e39c7a758a0f04ee105f56"
   },
   {
     "url": "css/uikit.min.css",
@@ -14,7 +14,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "feed.html",
-    "revision": "223395760d8075bf310d12d146982ac1"
+    "revision": "b01127671269d7d590ec62ba648d9630"
   },
   {
     "url": "images/project/back.svg",

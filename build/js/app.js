@@ -20,31 +20,26 @@ if ('serviceWorker' in navigator) {
 
 //js mvc architecture -- load other html pages on function call in main app via jquery load xml
 function loadfeed(){
-  console.log('this is the home feed');
   $('#myapp').load('feed.html');
   $('#page-title').text('Home');
 }
 
 function searchpage(){
-  console.log('this is the search page');
   $('#myapp').load('search.html');
   $('#page-title').text('Search');
 }
 
 function notify(){
-  console.log('this is the notification page');
   $('#myapp').load('notifications.html');
   $('#page-title').text('Nofitications');
 }
 
 function profile(){
-  console.log('this is the profile page');
   $('#myapp').load('profile.html');
   $('#page-title').text('Profile');
 }
 
 function settings(){
-  console.log('this is the settings page');
   $('#myapp').load('settings.html');
   $('#page-title').text('Settings');
 }

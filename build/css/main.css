@@ -66,6 +66,13 @@ li.uk-active {
   background: #ab3cec;
 }
 
+.uk-navbar-nav>li>a {
+  color: #fff;
+  text-transform: uppercase;
+  transition: .1s ease-in-out;
+  transition-property: color,background-color;
+}
+
 /* Custom Padding Classes */
 .pr-5 {
   padding-right: 5px;
@@ -91,6 +98,9 @@ li.uk-active {
 .pl-20 {
   padding-left: 20px;
 }
+.mr-2 {
+  margin-right: 2px;
+}
 .mr-5 {
   margin-right: 5px;
 }
@@ -102,6 +112,9 @@ li.uk-active {
 }
 .mr-20 {
   margin-right: 20px;
+}
+.ml-2 {
+  margin-left: 2px;
 }
 .ml-5 {
   margin-left: 5px;
