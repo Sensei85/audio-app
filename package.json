@@ -1,0 +1,12 @@
+{
+  "name": "livingstone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "http-server -p 2018 build -c-1"
+  },
+  "keywords": [],
+  "author": "Kent Wisdom",
+  "license": "ISC"
+}

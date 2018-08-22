@@ -1,0 +1,198 @@
+/* @import "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"; */
+
+/* Media Queries */
+@media screen and (min-width: 320px) {
+  .feed {
+    margin-top: -13px;
+  }
+}
+
+/* Customizations */
+#search-box {
+  border-right: none;
+  border-top: none;
+  border-left: none;
+}
+
+body {
+  background: #fdfdfd;
+  max-height: 100vh;
+  height: 100vh;
+}
+
+#page-title {
+  color: #fff;
+}
+
+li.uk-active {
+  transition: 0.2s ease-in-out;
+  border-bottom: none;
+}
+
+.uk-tab>.uk-active>a {
+  margin-top: -4px;
+  transition: 0.2s ease-in-out;
+  color: #ab3cec;
+  border-color: #fff;
+}
+
+.uk-card-default-custom {
+  background: #fff;
+  color: #666;
+}
+
+.uk-badge-notification {
+  box-sizing: border-box;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 5px;
+  border-radius: 50%;
+  vertical-align: top;
+  background: #1e87f0;
+  color: #fff;
+  font-size: .7rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: -2px;
+  /* float: right;
+  margin-top: -38px; */
+}
+
+/* Global Overrides */
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background: #ab3cec;
+}
+
+/* Custom Padding Classes */
+.pr-5 {
+  padding-right: 5px;
+}
+.pr-10 {
+  padding-right: 10px;
+}
+.pr-15 {
+  padding-right: 15px;
+}
+.pr-20 {
+  padding-right: 20px;
+}
+.pl-5 {
+  padding-left: 5px;
+}
+.pl-10 {
+  padding-left: 10px;
+}
+.pl-15 {
+  padding-left: 15px;
+}
+.pl-20 {
+  padding-left: 20px;
+}
+.mr-5 {
+  margin-right: 5px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.mr-15 {
+  margin-right: 15px;
+}
+.mr-20 {
+  margin-right: 20px;
+}
+.ml-5 {
+  margin-left: 5px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+.ml-15 {
+  margin-left: 15px;
+}
+.ml-20 {
+  margin-left: 20px;
+}
+.mt-5 {
+  margin-top: 5px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mb-5 {
+  margin-bottom: 5px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.pt-5 {
+  padding-top: 5px;
+}
+
+.uk-padding-custom {
+  padding: 8px;
+}
+
+
+/* Music Player CSS */
+#audio-progress {
+  width: 35%;
+  color: #767676;
+  border: 1px solid;
+  position: absolute;
+  align-self: auto;
+  top: 32px;
+  border-radius: 50px;
+  vertical-align: middle;
+  margin-left: 25px;
+}
+
+.icon-control-pause {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  height: inherit;
+}
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #f9f9f9;
+  color: white;
+}

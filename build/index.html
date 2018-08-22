@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#ab3cec">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/uikit.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>LSZMI Audio App</title>
+</head>
+<body onload="myfunction()">
+  <div class="uk-offcanvas-content" id="page_top">
+    <div class="tm-header-mobile uk-hidden@m">
+      <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <nav class="uk-navbar-container uk-navbar-primary" uk-navbar>
+          <div class="uk-navbar-left">
+            <a href="javascript:history.go(-1)" title="Return to previous page">
+              <div id="back_button" class="uk-navbar-left mr-10 pl-15" style="display: none">
+                <img src="images/project/left-arrow.svg" width="20" height="20" alt="">
+              </div>
+            </a>
+          </div>
+          <div class="uk-navbar-left">
+            <a class="uk-navbar-item uk-logo" href="">
+              <div>
+                <img src="" width="40" height="40" alt="">
+                <span id="page-title" class="uk-text-middle">Home</span>
+              </div>
+            </a>
+          </div>
+          <div id="menu-button" class="uk-navbar-right">
+            <a class="uk-navbar-item" href="#search_modal" uk-toggle><span class="uk-icon" uk-icon="icon: search" style="color: #fff"></span></a>
+            <!-- <a class="uk-navbar-item" title="Login / Register" href=""><span class="uk-icon" uk-icon="icon: user"></span></a> -->
+            <a class="uk-navbar-toggle" href="#tm-mobile" title="Menu" uk-toggle style="color: #fff"><div uk-navbar-toggle-icon></div></a>
+          </div>
+          <!-- Search Modal-->
+          <div id="search_modal" class="uk-modal-container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+              <button class="uk-modal-close-default" type="button" uk-close></button>
+              <form action="javascript:void(0)">
+                <div class="uk-margin" style="margin-bottom: -5px; margin-top: -5px">
+                  <input class="uk-input uk-form-large" id="search-box" type="text" placeholder="Search for something..." autofocus>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <!-- Icon Nav -->
+        <ul class="uk-child-width-expand uk-card uk-card-default uk-card-body" uk-tab style="padding-top: 10px; margin-top: -5px">
+          <li onclick="loadfeed()"><a style="padding-bottom: 16px"><span uk-icon="icon: home; ratio: 1.5"></span></a></li>
+          <li onclick="searchpage()"><a style="padding-bottom: 16px"><span uk-icon="icon: search; ratio: 1.5"></span></a></li>
+          <li onclick="notify()"><a style="padding-bottom: 16px"><span uk-icon="icon: bell; ratio: 1.5"></span><span class="uk-badge-notification">50</span></a></li>
+          <li onclick="profile()"><a style="padding-bottom: 16px"><span uk-icon="icon: user; ratio: 1.5"></span></a></li>
+          <li onclick="settings()"><a style="padding-bottom: 16px"><span uk-icon="icon: settings; ratio: 1.5"></span></a></li>
+        </ul>
+      </div>
+
+      <div id="tm-mobile" uk-offcanvas="flip: true" uk-offcanvas mode="push">
+        <div class="uk-offcanvas-bar">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <ul class="uk-nav uk-nav-primary uk-margin-auto-vertical">
+            <br>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li class="uk-nav-divider"></li>
+            <li><a href="">Login</a></li>
+            <li><a href="">Register</a></li>
+            <li class="uk-nav-divider"></li>
+            <li class="uk-nav-header uk-text-muted">Language</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tm-header uk-visible@m" uk-header>
+      <!-- TODO: Search bar overlay -->
+      <!-- <nav class="uk-navbar-container search_show" uk-navbar style="display: none">
+        <input id="search-box" type="text" placeholder="Type something to search...">
+      </nav> -->
+      <div uk-sticky media="360" cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container">
+        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+          <div class="uk-navbar-container">
+            <div class="uk-container">
+              <nav class="uk-navbar-container uk-margin" uk-navbar>
+                <div class="uk-navbar-center">
+                  <div class="uk-navbar-center-left"><div>
+                    <ul class="uk-navbar-nav">
+                      <li class=""><a href="" class="uk-button uk-button-text">Home</a></li>
+                      <li class=""><a href="" class="uk-button uk-button-text">About Us</a></li>
+                      <li class=""><a href="" class="uk-button uk-button-text">Services</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Main nav logo -->
+                <a class="uk-navbar-item uk-logo" href="index.html"> <img src="images/project/user.svg" alt="" width="40" height="40" alt="" style="margin-right: 5px"></a>
+
+                <div class="uk-navbar-center-right">
+                  <div>
+                    <ul class="uk-navbar-nav">
+                      <li><a href="" class="uk-button uk-button-text">Language</a></li>
+                      <li class="search_show" id="search_form" style="display: none">
+                        <a href="javascript:void(0)">
+                          <form action="javascript:void(0)">
+                            <input id="search_input" class="uk-input uk-form-width-medium" type="text" placeholder="Search services..." style="border-radius: 50px">
+                          </form>
+                        </a>
+                      </li>
+                      <li><a href="javascript:void(0)" onclick="toggle_search()"><span uk-icon="icon: search"></span></a></li>
+                      <li class=""><a href="">Login / Register</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="main-page">
+    <div id="myapp"></div>
+  </main>
+  <br><br><br>
+
+  <div class="navbar">
+    <a href="javascript:void(0)" class="active">
+      <img src="images/project/music-album.svg" width="40" height="40" alt="album-art">
+    </a>
+
+    <div class="uk-clearfix">
+      <div class="uk-float-left">
+        <div id="audio-progress"></div>
+      </div>
+      <div class="uk-float-right">
+        <a href="javascript:void(0)"><span class="icon-control-pause icons"></span></a>
+      </div>
+      <div class="uk-float-right">
+        <a href="javascript:void(0)"><span uk-icon="icon: play; ratio: 2"></span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- End of Canvas -->
+  </div>
+<script type="text/javascript" src="js/app.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/uikit.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/uikit-icons.min.js" charset="utf-8"></script>
+</body>
+</html>
